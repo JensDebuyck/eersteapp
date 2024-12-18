@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { LandenComponent } from './landen/landen.component';
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+selector: 'app-root',
+standalone: true,
+imports: [RouterLink, RouterOutlet],
+templateUrl: 'app.component.html',
+styleUrl: 'app.component.css',
 })
 export class AppComponent {
-  title = 'eersteapp';
+title = 'Een landenlijst';
 }

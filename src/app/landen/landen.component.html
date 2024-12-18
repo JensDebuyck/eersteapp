@@ -1,0 +1,15 @@
+<h2> Mijn landen</h2>
+<p>Totaal keer geklikt: {{totalVotes}}</p>
+<ul class="landen">
+    @for (l of landen; track l.id) {
+        <li class="m-2">
+            <a routerLink="/detail/{{ l.id }}">
+            <span>{{ l.id }} {{ l.name }}</span>
+            </a>
+            </li>
+    } @empty {
+      <li>Geen landen beschikbaar.</li>
+    }
+  </ul>
+
+<button (click)="naarBelgie()" class="btn btn-primary">Naar de details van België</button>

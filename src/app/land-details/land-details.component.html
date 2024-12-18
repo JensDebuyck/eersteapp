@@ -1,0 +1,15 @@
+@if (land !== null) {
+    <div>
+    <h2>Details van {{ land.name }}</h2>
+    <div><label>id: </label>{{ land.id }}</div>
+    <div>
+    <label>naam: </label>
+    <input [(ngModel)]="land.name" placeholder="naam" />
+    </div>
+    <div>
+    <label>inwoners: </label>
+    <input [(ngModel)]="land.inwoners" placeholder="inwoners" />
+    </div>
+    <button (click)="goBack()">Go back</button>
+    </div>
+    }
